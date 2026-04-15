@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>touch_driver</name>
+  <version>1.0.0</version>
+  <description>ROS driver for 3D Systems Touch / Geomagic Touch haptic device using OpenHaptics HDAPI</description>
+  <maintainer email="lgruszka@todo.com">lgruszka</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>message_runtime</depend>
+
+  <build_depend>message_generation</build_depend>
+</package>

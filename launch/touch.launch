@@ -1,0 +1,17 @@
+<launch>
+  <!-- 3D Systems Touch haptic device driver -->
+
+  <arg name="device_name"    default="Default Device"  doc="Device name from Touch Setup utility" />
+  <arg name="omni_name"      default="phantom"         doc="ROS namespace prefix for topics" />
+  <arg name="reference_frame" default="world"           doc="TF reference frame for pose" />
+  <arg name="units"          default="m"               doc="Position units: mm, cm, dm, m" />
+  <arg name="publish_rate"   default="100"             doc="Publishing rate in Hz" />
+
+  <node name="touch_node" pkg="touch_driver" type="touch_node" output="screen">
+    <param name="device_name"     value="$(arg device_name)" />
+    <param name="omni_name"       value="$(arg omni_name)" />
+    <param name="reference_frame" value="$(arg reference_frame)" />
+    <param name="units"           value="$(arg units)" />
+    <param name="publish_rate"    value="$(arg publish_rate)" />
+  </node>
+</launch>
